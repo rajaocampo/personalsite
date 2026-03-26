@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raja | Personal Website</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1 class="fade-in">Raja Ocampo</h1>
+    <p class="fade-in">Creative • Student • Dreamer</p>
+</header>
+
+<!-- NAV -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <img src="yourphoto.jpg" class="profile">
+
+    <p>
+        Hello! My name is Raja, and I am a passionate and motivated student who is deeply interested in creativity, technology, and personal growth. 
+        I enjoy exploring new ideas and turning them into something meaningful, whether it is through designing websites, learning new skills, or simply expressing myself through different hobbies.
+        <br><br>
+        I believe that every day is an opportunity to improve and become better than yesterday. I am someone who values hard work, consistency, and creativity. 
+        I enjoy challenges because they help me grow and discover what I am truly capable of.
+        <br><br>
+        In my free time, I love doing activities that inspire me and bring me joy. These hobbies help me relax, think clearly, and stay motivated. 
+        I also enjoy spending time learning things that can help me in the future, especially in the field of technology and design.
+        <br><br>
+        My goal is to continue improving myself, build amazing projects, and someday create something that can inspire others as well.
+    </p>
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies" class="section">
+    <h2>My Hobbies</h2>
+
+    <div class="hobby-container">
+        <div class="card fade-up">
+            <img src="hobby1.jpg">
+            <p>Gaming</p>
+        </div>
+
+        <div class="card fade-up">
+            <img src="hobby2.jpg">
+            <p>Watching Movies</p>
+        </div>
+
+        <div class="card fade-up">
+            <img src="hobby3.jpg">
+            <p>Cooking</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+
+    <button onclick="changeColor()">Change Background</button>
+    <button onclick="showGreeting()">Say Hello</button>
+
+    <p id="message"></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Raja Ocampo | Personal Website</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function showGreeting() {
+    document.getElementById("message").innerHTML = "Hello! Thanks for visiting my website 😊";
+}
+
+// Change background color
+function changeColor() {
+    const colors = ["#fff6d6", "#fde2e4", "#e2f0cb", "#d0e6ff"];
+    let random = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.background = random;
+}
+
+// Fade-in on scroll
+const faders = document.querySelectorAll(".fade-up");
+
+window.addEventListener("scroll", () => {
+    faders.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+            el.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
